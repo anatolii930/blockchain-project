@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "AIE JSON",
+  "description": "AIE JSON",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "minLength": 1
+    },
+    "password": {
+      "type": "string",
+      "minLength": 1
+    },
+    "token": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "username",
+    "password"
+  ],
+  "additionalProperties": false
+}

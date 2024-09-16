@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "AIE JSON",
+  "description": "AIE JSON",
+  "type": "object",
+  "properties": {
+    "claimId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "estimatedCost":{
+      "type": "number"
+    },
+    "writeOff":{
+      "enum": [ true ]
+    },
+    "notes":{
+      "type":"string",
+      "minLength": 1
+    },
+    "vehicleRegistration": {
+      "type":"string",
+      "minLength": 1,
+      "maxLength": 15
+    }
+  },
+  "required": [
+    "claimId",
+    "estimatedCost",
+    "vehicleRegistration"
+  ],
+  "additionalProperties": false
+}

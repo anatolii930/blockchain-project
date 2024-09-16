@@ -1,0 +1,211 @@
+{
+  "blockchain": {
+    "peerAddress": "services-uscentral.skytap.com:8551",
+    "eventsAddress": "services-uscentral.skytap.com:8560",
+    "memberssvcAddress": "services-uscentral.skytap.com:8447",
+    "keystorePath": "/keyValStore",
+    "chaincodeId": "6d84f7985656fe782b93c7e986da6e8aa33eae1df777ce6a988931aedc2291cdf477c33cc02051334a42cf33180e25169d0fdd4a0d2d59b6c6ae170c27f8b3af",
+    "devMode": false,
+    "registrarUser": {
+      "enrollmentId": "WebAppAdmin",
+      "enrollSecret": "DJY27pEnl16d"
+    },
+    "oracleUser" : "oracle",
+    "insurerUser": "insurer1",
+    "setup": {
+      "shouldSetupUsers": true,
+      "deploy": {
+        "waitTime": 5,
+        "functionName": "init",
+        "chaincodePath": "insurance_main",
+        "args": ["localhost:3000"]
+      },
+      "deployUser": {
+        "enrollmentId": "test_user4",
+        "enrollSecret": "4nXSrfoYGFCP"
+      }
+
+    },
+    "users": [
+      {
+        "enrollmentId": "claimant1",
+        "affiliation": "institution_a",
+        "attributes": [
+          {
+            "name": "username",
+            "value": "claimant1"
+          },
+          {
+            "name": "role",
+            "value": "policyholder"
+          }
+        ],
+        "emailAddress": "poc.claimant1@gmail.com"
+      },
+      {
+        "enrollmentId": "claimant2",
+        "affiliation": "institution_a",
+        "attributes": [
+          {
+            "name": "username",
+            "value": "claimant2"
+          },
+          {
+            "name": "role",
+            "value": "policyholder"
+          }
+        ],
+        "emailAddress": "poc.claimant2@gmail.com"
+      },
+      {
+        "enrollmentId": "insurer1",
+        "affiliation": "institution_a",
+        "attributes": [
+          {
+            "name": "username",
+            "value": "insurer1"
+          },
+          {
+            "name": "role",
+            "value": "insurer"
+          }
+        ]
+      },
+      {
+        "enrollmentId": "insurer2",
+        "affiliation": "institution_a",
+        "attributes": [
+          {
+            "name": "username",
+            "value": "insurer2"
+          },
+          {
+            "name": "role",
+            "value": "insurer"
+          }
+        ]
+      },
+      {
+        "enrollmentId": "garage1",
+        "affiliation": "institution_a",
+        "attributes": [
+          {
+            "name": "username",
+            "value": "garage1"
+          },
+          {
+            "name": "role",
+            "value": "garage"
+          }
+        ]
+      },
+      {
+        "enrollmentId": "garage2",
+        "affiliation": "institution_a",
+        "attributes": [
+          {
+            "name": "username",
+            "value": "garage2"
+          },
+          {
+            "name": "role",
+            "value": "garage"
+          }
+        ]
+      },
+      {
+        "enrollmentId": "superuser",
+        "affiliation": "institution_a",
+        "attributes": [
+          {
+            "name": "username",
+            "value": "superuser"
+          },
+          {
+            "name": "role",
+            "value": "superuser"
+          }
+        ]
+      },
+      {
+        "enrollmentId": "oracle",
+        "affiliation": "institution_a",
+        "attributes": [
+          {
+            "name": "username",
+            "value": "oracle"
+          },
+          {
+            "name": "role",
+            "value": "oracle"
+          }
+        ]
+      }
+    ]
+  },
+  "swagger": {
+    "info": {
+      "title": "Node Example Swagger API",
+      "version": "1.0.0",
+      "description": "Documenting our RESTful API with Swagger "
+    },
+    "host": "blockchain-insurance.eu-gb.mybluemix.net",
+    "basePath": "/"
+  },
+  "allowedOrigins": [
+    "http://aston-swagger-ui.eu-gb.mybluemix.net",
+    "https://aston-swagger-ui.eu-gb.mybluemix.net",
+    "https://localhost:3000",
+    "http://localhost:3000",
+    "https://localhost:3001",
+    "http://localhost:3001",
+    "https://localhost:8080",
+    "http://localhost:8080",
+    "https://localhost:8081",
+    "http://localhost:8081",
+    "http://blockchain-insurance-claimant-dashboard.eu-gb.mybluemix.net",
+    "https://blockchain-insurance-claimant-dashboard.eu-gb.mybluemix.net",
+    "http://blockchain-insurance-garage-dashboard.eu-gb.mybluemix.net",
+    "https://blockchain-insurance-garage-dashboard.eu-gb.mybluemix.net"
+  ],
+  "app": {
+    "paths": {
+      "api": {
+        "base": "component",
+        "itemName": "items"
+      }
+    },
+    "version": {
+      "major": 0,
+      "minor": 4,
+      "bug": 0
+    }
+  },
+  "web": {
+    "auth": {
+      "secret": "123",
+      "name": "exampleAPI"
+    },
+    "status": {
+      "success": {
+        "ok": {
+          "code": 200,
+          "message": "OK"
+        }
+      },
+      "failure": {
+        "serverError": {
+          "code": 500,
+          "message": "Server Error"
+        },
+        "notFound": {
+          "code": 404,
+          "message": "Not Found"
+        }
+      }
+    }
+  },
+  "email": {
+    "serverAddress": "http://aston-email-server.eu-gb.mybluemix.net/mail"
+  }
+}
